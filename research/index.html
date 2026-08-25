@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Dynaface</title>
+  <title>Research | Dynaface</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <meta name="description" content="Dynaface          Facial measurements from photos and video      Dynaface measures facial symmetry and facial movement from still images and video, using AI to place 97 facial landmarks au">
+  <meta name="description" content="How It Works  Dynaface builds on three neural networks, all run locally through ONNX Runtime:          ModelRoleLicense           BlazeFace (short-range)Face bounding-box detectionApache-2.0 (MediaPi">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dynaface">
-<meta property="og:url" content="https://www.dynaface.org/index.html">
+<meta property="og:title" content="Research">
+<meta property="og:url" content="https://www.dynaface.org/research/index.html">
 <meta property="og:site_name" content="Dynaface">
-<meta property="og:description" content="Dynaface          Facial measurements from photos and video      Dynaface measures facial symmetry and facial movement from still images and video, using AI to place 97 facial landmarks au">
+<meta property="og:description" content="How It Works  Dynaface builds on three neural networks, all run locally through ONNX Runtime:          ModelRoleLicense           BlazeFace (short-range)Face bounding-box detectionApache-2.0 (MediaPi">
 <meta property="og:locale">
 <meta property="og:image" content="https://www.dynaface.org/dynaface-title.jpg">
 <meta property="article:published_time" content="2026-08-25T15:11:10.544Z">
@@ -74,7 +74,7 @@
     <div class="collapse navbar-collapse" id="main-menu-navbar">
       <ul class="nav navbar-nav">
         
-          <li><a class="active"
+          <li><a class=""
                  href="/">Home</a></li>
         
           <li><a class=""
@@ -83,7 +83,7 @@
           <li><a class=""
                  target="_blank" rel="noopener" href="https://github.com/jeffheaton/dynaface/blob/main/dynaface-app/manual.md">Manual</a></li>
         
-          <li><a class=""
+          <li><a class="active"
                  href="/research/">Research</a></li>
         
           <li><a class=""
@@ -107,7 +107,7 @@
 </nav>
 
   <div class="container">
-    
+    <h1>Research</h1>
 <div class="row">
     <div class="col-sm-12 blog-main">
       <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
@@ -118,54 +118,38 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-<div class="site-lockup">
-  <img class="site-lockup-mark" src="/dynaface-mark.png" alt="" width="192" height="192">
-  <div class="site-lockup-text">
-    <span class="site-lockup-name">Dynaface</span>
-    <span class="site-lockup-rule"></span>
-    <span class="site-lockup-tagline">Facial measurements from photos and video</span>
-  </div>
-</div>
+<h1>How It Works</h1>
 
-<p>Dynaface measures facial symmetry and facial movement from still
-images and video, using AI to place 97 facial landmarks automatically. It works
-on both symmetric and asymmetric faces, and every measurement can be exported to
-CSV/Excel for further analysis.</p>
+<p>Dynaface builds on three neural networks, all run locally through ONNX Runtime:</p>
 
-<p>Dynaface is free and open source, and is developed by
-<a target="_blank" rel="noopener" href="https://www.heatonresearch.com/">Jeff Heaton</a> in collaboration with
-Johns Hopkins University. All processing happens locally on your own machine &mdash;
-no image or video data is uploaded anywhere. See
-<a target="_blank" rel="noopener" href="https://bit.ly/4201i3j">the story behind Dynaface</a> for background.</p>
+<table class="table">
+  <thead>
+    <tr><th>Model</th><th>Role</th><th>License</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>BlazeFace (short-range)</td><td>Face bounding-box detection</td><td>Apache-2.0 (MediaPipe)</td></tr>
+    <tr><td>SPIGA (WFLW-98)</td><td>98-point landmarks and head pose</td><td>BSD-3-Clause</td></tr>
+    <tr><td>U&sup2;-Net</td><td>Background/saliency removal for lateral views</td><td>Apache-2.0</td></tr>
+  </tbody>
+</table>
 
-<p>Dynaface is a research tool and is not a registered medical device; see
-<a href="/legal/">Legal</a> for details.</p>
+<h1>Research Using Dynaface</h1>
 
-<h1 id="download">Get Dynaface</h1>
-
-<ul class="list-inline download-buttons">
-  <li><a class="btn btn-primary" target="_blank" rel="noopener" href="https://apps.apple.com/us/app/dynaface/id6475224118"><i class="fa-brands fa-apple"></i> macOS, iPhone &amp; iPad</a></li>
-  <li><a class="btn btn-primary" target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9ng0gpsmktb2"><i class="fa-brands fa-windows"></i> Windows 10/11</a></li>
-  <li><a class="btn btn-default" target="_blank" rel="noopener" href="https://github.com/jeffheaton/dynaface/releases"><i class="fa-brands fa-github"></i> All Releases</a></li>
-</ul>
-
-<p><strong>Recommended for macOS:</strong> an Apple M-series chip (Intel is still
-supported), 16GB+ of memory, and macOS 14 (Sonoma) or later. If the application
-will not start, the
-<a target="_blank" rel="noopener" href="https://github.com/jeffheaton/dynaface/blob/main/support-mac.md">Mac support guide</a>
-walks through launching it from Terminal and collecting log files for a bug report.</p>
-
-<h1>Documentation and Libraries</h1>
+<p>Dynaface has been used in peer-reviewed medical research to quantify
+oral-ocular synkinesis and to study how AI-derived facial metrics relate to
+patient-reported outcomes. If you use Dynaface in academic work, please cite:</p>
 
 <ul>
-  <li><a target="_blank" rel="noopener" href="https://github.com/jeffheaton/dynaface/blob/main/dynaface-app/manual.md">User's Guide</a> &mdash; the application manual.</li>
-  <li><a target="_blank" rel="noopener" href="https://github.com/jeffheaton/dynaface/tree/main/dynaface-lib-python">Python library</a> &mdash; scriptable access to the same measurements.</li>
-  <li><a target="_blank" rel="noopener" href="https://github.com/jeffheaton/dynaface/tree/main/dynaface-lib-dotnet">.NET library</a> &mdash; for C# and other .NET applications.</li>
-  <li><a target="_blank" rel="noopener" href="https://github.com/jeffheaton/dynaface">Source code</a> &mdash; released under the Apache License 2.0.</li>
+  <li>Renne, A., Heaton, J., &amp; Boahene, K. D. O. (2026). Associations of AI-based facial metrics with patient-reported outcomes in idiopathic facial paralysis. <em>Laryngoscope</em>. Advance online publication. <a target="_blank" rel="noopener" href="https://doi.org/10.1002/lary.70417">https://doi.org/10.1002/lary.70417</a></li>
+  <li>Renne, A., Heaton, J., Derakhshan, A., Nellis, J. C., Desai, S. C., &amp; Boahene, K. D. (2025). Use of dynamic, automated facial analysis in quantifying oral-ocular synkinesis. <em>Facial Plastic Surgery &amp; Aesthetic Medicine</em>. <a target="_blank" rel="noopener" href="https://doi.org/10.1177/26893614251395737">https://doi.org/10.1177/26893614251395737</a></li>
+  <li>Berges, A. J., Renne, A., Heaton, J., Leung, D. G., &amp; Boahene, K. D. (2025). Facial weakness in facioscapulohumeral muscular dystrophy: Objective and patient-reported measures to guide reconstructive interventions. <em>Facial Plastic Surgery &amp; Aesthetic Medicine</em>, Article 26893614251407675. <a target="_blank" rel="noopener" href="https://doi.org/10.1177/26893614251407675">https://doi.org/10.1177/26893614251407675</a></li>
 </ul>
 
-<p>For how Dynaface works under the hood and the peer-reviewed studies that use
-it, see <a href="/research/">Research</a>.</p>
+<p>A BibTeX entry is available in
+<a target="_blank" rel="noopener" href="https://github.com/jeffheaton/dynaface/blob/main/CITATION.bib">CITATION.bib</a>.
+Please also cite the original authors of the three neural networks listed above;
+their references are in the
+<a target="_blank" rel="noopener" href="https://github.com/jeffheaton/dynaface#neural-network-models">project README</a>.</p>
 
       
     </div>
@@ -176,7 +160,7 @@ it, see <a href="/research/">Research</a>.</p>
     
 
     <footer class="article-footer">
-      <a data-url="https://www.dynaface.org/index.html" data-id="cmt8sys780002ltyyaaoo3m4e" class="article-share-link">
+      <a data-url="https://www.dynaface.org/research/index.html" data-id="cmt8sys7a0004ltyydq306ep6" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
