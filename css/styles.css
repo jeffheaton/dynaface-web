@@ -1428,6 +1428,71 @@ code {
   .site-lockup-tagline { font-size: 14px; }
 }
 
+/* Home page phone screenshot.
+   An App Store iPhone screenshot floated beside the intro and download
+   sections; the dark border and rounded corners stand in for a device frame
+   without a bitmap mockup. Below the tablet breakpoint the section becomes a
+   flex column so the phone can sit between the intro and the download buttons
+   instead of pushing the intro down the page. */
+.home-intro {
+  display: flow-root; /* contain the float so it never overlaps the next section */
+}
+.home-phone {
+  float: right;
+  width: 250px;
+  margin: 6px 0 16px 32px;
+}
+.home-phone a {
+  display: block;
+}
+.article-entry .home-phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 5px solid #1d1d1f;
+  border-radius: 39px;
+  background-color: #1d1d1f;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+.home-phone figcaption {
+  margin-top: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .home-phone {
+    width: 210px;
+    margin-left: 24px;
+  }
+  .article-entry .home-phone img {
+    border-radius: 33px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-intro {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-intro-text { order: 0; }
+  .home-phone {
+    order: 1;
+    float: none;
+    width: 220px;
+    max-width: 70%;
+    margin: 4px auto 22px;
+  }
+  .article-entry .home-phone img {
+    border-radius: 35px;
+  }
+  .home-download { order: 2; }
+}
+
 .download-buttons {
   margin-bottom: 25px;
 }
@@ -1436,5 +1501,70 @@ code {
 }
 .download-buttons .btn {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+ * Story page (/story/): the Post-Dispatch photograph and excerpt
+ */
+.article-entry .story-photo {
+  margin: 4px 0 26px;
+}
+.article-entry .story-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.story-photo figcaption {
+  margin-top: 8px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+/* The excerpt keeps body size (base.css enlarges blockquotes) and borrows the
+   amber rule from the logo lockup. */
+.story-excerpt {
+  margin: 26px 0;
+  padding: 4px 0 4px 24px;
+  font-size: 1em;
+  border-left: 5px solid #f2b02c;
+}
+.story-excerpt p:last-child {
+  margin-bottom: 0;
+}
+.story-omission {
+  color: var(--muted);
+}
+.story-source {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/*
+ * Contributors page (/contributors/)
+ */
+.contributor-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 30px;
+}
+.contributor-list > li {
+  margin-bottom: 22px;
+}
+.contributor-name {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.contributor-title,
+.contributor-affiliation {
+  display: block;
+}
+.contributor-affiliation {
+  color: var(--muted);
 }
 
