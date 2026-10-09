@@ -1169,6 +1169,9 @@ code {
   .navbar-nav>li>a {
     padding-top: 10px;
     padding-bottom: 10px;
+    /* Anchor the active-page caret (a.active:after) under its own link
+       rather than the middle of the navbar. */
+    position: relative;
   }
 
   .navbar-inverse .navbar-nav>li>a.active:after {
@@ -1183,6 +1186,16 @@ code {
     border-right: 5px solid transparent;
     border-bottom: 5px solid;
     border-left: 5px solid transparent;
+  }
+}
+
+/* Between Bootstrap's sm and md breakpoints the full menu is wider than the
+   750px container and wraps onto a second row; tighter link padding keeps it
+   on one line. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav>li>a {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 
