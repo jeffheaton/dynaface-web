@@ -14,8 +14,8 @@
 <meta property="og:description" content="Every measurement Dynaface computes, including the Facial Asymmetry Index, oral commissure excursion, brow height, eye area, dental display and profile angles.">
 <meta property="og:locale">
 <meta property="og:image" content="https://www.dynaface.org/dynaface-title.jpg">
-<meta property="article:published_time" content="2026-10-20T18:01:51.560Z">
-<meta property="article:modified_time" content="2026-10-20T18:01:51.560Z">
+<meta property="article:published_time" content="2026-10-25T04:43:29.246Z">
+<meta property="article:modified_time" content="2026-10-25T04:43:29.246Z">
 <meta property="article:author" content="Jeff Heaton">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.dynaface.org/dynaface-title.jpg">
@@ -205,11 +205,13 @@ in millimeters.</p>
 <p><small>CSV: <code>ml</code></small></p>
 
 <h3>Nose (Frontal)</h3>
-<p>Four horizontal widths of the nose seen from the front, in millimeters: across
-the nostrils, at the nasal tip, and at two heights along the nasal dorsum (its
-base and its bridge).</p>
-<p><small>CSV: <code>nostril</code>, <code>nose.tip</code>, <code>dorsal.base</code>,
-<code>dorsal.bridge</code></small></p>
+<p>Two widths of the nose seen from the front, in millimeters, measured between
+points on the nose's lower outline: the <strong>alar width</strong>, between the
+outer edges of the nostrils, and the <strong>nostril width</strong>, between the
+midpoints of the two nostrils.</p>
+<p><small>CSV: <code>nose.alar</code>, <code>nose.nostril</code>. These replace the
+earlier <code>nostril</code>, <code>nose.tip</code>, <code>dorsal.base</code> and
+<code>dorsal.bridge</code> columns, which held only these two widths.</small></p>
 
 <h1>Head Position, Pose, and Color</h1>
 
@@ -280,7 +282,7 @@ that uses these measurements.</p>
     
 
     <footer class="article-footer">
-      <a data-url="https://www.dynaface.org/measurements/" data-id="cmvgzpy4o0006m85q57h156n5" class="article-share-link">
+      <a data-url="https://www.dynaface.org/measurements/" data-id="cmvncejui0006o037b5c10gtu" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
